@@ -8,7 +8,10 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false
 
 -- space + e buat munculin neotree
-vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Neo-tree Focus" })
+-- vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Neo-tree Focus" })
+
+-- pencet minus (-) buat munculin floating oil nvim
+vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
 -- space + bd buat hapus salah satu buffer
 vim.keymap.set('n', '<leader>bd', function() require("mini.bufremove").delete(0, false) end,
@@ -44,13 +47,13 @@ vim.keymap.set('t', '<C-l>', [[<C-\><C-n><C-w>l]])
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
--- ini biar sama kayak error lens di vscode
-vim.diagnostic.config({
-    virtual_text = true,
-})
+-- -- ini biar sama kayak error lens di vscode
+-- vim.diagnostic.config({
+--     virtual_text = true,
+-- })
 
 -- ubah tema ke onedark karena saya suka
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme catppuccin")
 
 -- ini buat munculin line number sama relative number
 vim.opt.number = true

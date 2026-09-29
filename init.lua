@@ -7,9 +7,6 @@ vim.opt.clipboard = "unnamedplus"
 -- set no wrap
 vim.opt.wrap = false
 
--- space + e buat munculin neotree
--- vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Neo-tree Focus" })
-
 -- pencet minus (-) buat munculin floating oil nvim
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
@@ -47,11 +44,6 @@ vim.keymap.set('t', '<C-l>', [[<C-\><C-n><C-w>l]])
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
--- -- ini biar sama kayak error lens di vscode
--- vim.diagnostic.config({
---     virtual_text = true,
--- })
-
 -- ubah tema ke onedark karena saya suka
 vim.cmd("colorscheme catppuccin")
 
@@ -68,8 +60,7 @@ vim.opt.expandtab = true
 vim.opt.cursorline = true
 
 if vim.g.neovide then
-    vim.o.guifont = "Maple_Mono_Normal_NF:h12"
-    -- vim.opt.linespace = 3
-    -- vim.g.neovide_cursor_vfx_mode = { "torpedo" }
-    -- vim.g.neovide_cursor_animation_length = 0.0
+    vim.o.guifont = "Hack Nerd Font Mono:h12"
+    vim.opt.linespace = 4
+    vim.g.neovide_cursor_animation_length = 0.0
 end

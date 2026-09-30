@@ -10,6 +10,9 @@ vim.opt.wrap = false
 -- pencet minus (-) buat munculin floating oil nvim
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
+-- pencet SPC + e untuk munculin neotree
+vim.keymap.set("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Open Neotree" })
+
 -- space + bd buat hapus salah satu buffer
 vim.keymap.set('n', '<leader>bd', function() require("mini.bufremove").delete(0, false) end,
     { desc = 'Close current buffer' })
@@ -45,7 +48,7 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
 -- ubah tema ke onedark karena saya suka
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme monokai-pro")
 
 -- ini buat munculin line number sama relative number
 vim.opt.number = true
@@ -56,11 +59,14 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- disable mouse
+vim.opt.mouse = ""
+
 -- ini biar baris cursor di highlight
 vim.opt.cursorline = true
 
 if vim.g.neovide then
-    vim.o.guifont = "Hack Nerd Font Mono:h12"
-    vim.opt.linespace = 4
+    vim.o.guifont = "CaskaydiaMono_Nerd_Font_Mono:h12"
+    vim.opt.linespace = 6
     vim.g.neovide_cursor_animation_length = 0.0
 end

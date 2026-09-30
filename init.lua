@@ -48,7 +48,7 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
 -- ubah tema ke onedark karena saya suka
-vim.cmd("colorscheme monokai-pro")
+vim.cmd("colorscheme monokai-pro-octagon")
 
 -- ini buat munculin line number sama relative number
 vim.opt.number = true
@@ -66,7 +66,7 @@ vim.opt.mouse = ""
 vim.opt.cursorline = true
 
 if vim.g.neovide then
-    vim.o.guifont = "CaskaydiaMono_Nerd_Font_Mono:h12"
-    vim.opt.linespace = 6
+    vim.o.guifont = "JetBrainsMono_NF:h11"
+    vim.opt.linespace = 4
     vim.g.neovide_cursor_animation_length = 0.0
 end
